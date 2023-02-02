@@ -34,6 +34,25 @@
     margin-bottom: 3.2rem;
     text-align: left;
 
+    .animation {
+      display: inline-block;
+      transform-origin: bottom right;
+      animation-duration: 1s;
+      animation-name: wave;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+
+    @keyframes wave {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(30deg);
+      }
+    }
+
     @include respond(tab-land) {
       font-size: 4rem;
     }
